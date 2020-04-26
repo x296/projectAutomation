@@ -7,9 +7,9 @@ path = '/Users/piotrzyzinski/pythonProjects/'
 folderName = str(sys.argv[1]) # Linking folder name sending by arg to string
 driver = webdriver.Safari() # Defining driver for Safari
 file = open('files/git_pass.txt', 'r')
-if f.mode == 'r':
-	git_login = str(file.readlines())
-	git_pass = str(file.readlines())
+if file.mode == 'r':
+	git_login = str(file.readline())
+	git_pass = str(file.readline())
 	
 file.close()
 
