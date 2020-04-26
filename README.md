@@ -3,3 +3,5 @@ Python script which create new project folder, init a git, creating online repo,
 .my_commands.sh is located in home dir and connected to .bash_profile
 
 in both .my_commands.sh and create.py is specified paths that need to be changed for use.
+
+in file/git_pass.txt you have to input your passes to GitHub account.

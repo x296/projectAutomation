@@ -1,2 +1,2 @@
-piotr.zyzinski@gmail.com
-raxzoj-5zutga-qIbdep
+git_login
+git_password

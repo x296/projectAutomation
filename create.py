@@ -6,16 +6,13 @@ from selenium import webdriver
 path = '/Users/piotrzyzinski/pythonProjects/'
 folderName = str(sys.argv[1]) # Linking folder name sending by arg to string
 driver = webdriver.Safari() # Defining driver for Safari
-file = open('files/git_pass.txt', 'r')
+file = open('/Users/piotrzyzinski/pythonProjects/projectAutomation/files/git_pass.txt', 'r')
 if file.mode == 'r':
-	git_login = str(file.readline())
-	git_pass = str(file.readline())
+	git_login = str(file.readline()).strip()
+	git_pass = str(file.readline()).strip()
 	
 file.close()
 
-
-print(git_login)
-print(git_pass)
 
 def create():
 	try: 
@@ -27,11 +24,11 @@ def create():
 		
 		login_field = driver.find_element_by_xpath('//*[@id="login_field"]')
 		login_field.clear()
-		login_field.send_keys('piotr.zyzinski@gmail.com')
+		login_field.send_keys(git_login)
 		
 		password_field = driver.find_element_by_xpath('//*[@id="password"]')
 		password_field.clear()
-		password_field.send_keys('raxzoj-5zutga-qIbdep')
+		password_field.send_keys(git_pass)
 		
 		log_in_btn = driver.find_element_by_xpath('//*[@id="login"]/form/div[4]/input[9]')
 		log_in_btn.click()
